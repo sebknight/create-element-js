@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <title>Create Element</title>
+  </head>
+  <body>
+
+    <script>
+    console.log("page loaded");
+    function createText() { //function to create content
+      var d = document.createElement("div"); //parent div
+      var h = document.createElement("h1"); //heading
+      var t = document.createTextNode("I tried to find the rhythm of the world where I used to live. I followed the current. I was silent, attentive, I made a conscious effort to smile, nod, stand, and perform the millions of gestures that constitute life on earth."); //text content
+      console.log("variables set");
+      var f = document.querySelector("body"); //targets body
+      d.appendChild(h); //attaches heading to div
+      h.appendChild(t); //attaches text to heading
+      document.body.appendChild(d); //attaches div to document
+      console.log("elements created and attached");
+      d.style.width = '900px'; //sets width of div
+      f.style.fontFamily = 'Roboto', 'sans-serif'; //sets font
+      f.style.color = '#2D2D2D'; //sets color
+      console.log("style set");
+  };
+  window.onload = createText(); //runs function on window load
+    </script>
+
+  </body>
+</html>
