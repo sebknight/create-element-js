@@ -9,7 +9,7 @@
 
     <script>
     console.log("page loaded");
-    function createText() { //function to create content
+    function createText(width,font,color) { //function to create content
       var d = document.createElement("div"); //parent div
       var h = document.createElement("h1"); //heading
       var t = document.createTextNode("I tried to find the rhythm of the world where I used to live. I followed the current. I was silent, attentive. I made a conscious effort to smile, nod, stand, and perform the millions of gestures that constitute life on earth."); //text content
@@ -19,12 +19,12 @@
       h.appendChild(t); //attaches text to heading
       document.body.appendChild(d); //attaches div to document
       console.log("elements created and attached");
-      d.style.width = '950px'; //sets width of div
-      f.style.fontFamily = 'Roboto', 'sans-serif'; //sets font
-      f.style.color = '#2D2D2D'; //sets color
+      d.style.width = width; //sets width of div
+      f.style.fontFamily = font; //sets font
+      f.style.color = color; //sets color
       console.log("style set");
     };
-    window.onload = createText(); //runs function on window load
+    window.onload = createText('950px','Roboto','#2D2D2D'); //runs function on window load
     </script>
 
   </body>
